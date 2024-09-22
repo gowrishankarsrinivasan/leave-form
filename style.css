@@ -201,7 +201,7 @@ label {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
-        padding: 15px;
+        padding: 25px;
     }
 }
 
