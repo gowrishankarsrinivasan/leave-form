@@ -73,7 +73,6 @@
               id="phone"
               name="phone"
               placeholder="123-456-7890"
-              placeholder="enter your phone number here"
               required
             />
           </div>
@@ -110,7 +109,7 @@
             type="email"
             id="managerEmail"
             name="managerEmail"
-            placeholder="enter your Manager email here"
+            placeholder="Enter your manager's email here"
             required
           />
         </div>
@@ -128,27 +127,24 @@
           <h2>Details for leave</h2>
           <hr />
         </div>
-        <div class="form-group">
-          <label>Leave Request For</label>
-          <div class="radio-container">
-            <label for="days" class="radio-label">Days</label>
-            <input
-              type="radio"
-              id="days"
-              name="leaveRequestFor"
-              class="radio-btn"
-              checked
-            />
-
-            <label for="hours" class="radio-label">Hours</label>
-            <input
-              type="radio"
-              id="hours"
-              name="leaveRequestFor"
-              class="radio-btn"
-            />
-          </div>
-        </div>
+        <fieldset class="fieldset">
+          <legend>Leave Request For</legend>
+          <label for="days" class="radio-label">Days</label>
+          <input
+            type="radio"
+            id="days"
+            name="leaveRequestFor"
+            class="radio-btn"
+            checked
+          />
+          <label for="hours" class="radio-label">Hours</label>
+          <input
+            type="radio"
+            id="hours"
+            name="leaveRequestFor"
+            class="radio-btn"
+          />
+        </fieldset>
 
         <!-- Days input section -->
         <div class="form-group" id="days-section">
@@ -192,11 +188,7 @@
 
         <div class="form-group">
           <label for="comments">Reason for leave</label>
-          <textarea
-            id="comments"
-            name="comments"
-            rows="4"
-            
+          <textarea id="comments" name="comments" rows="4" placeholder="Please describe your reason for leave"
           ></textarea>
         </div>
 
