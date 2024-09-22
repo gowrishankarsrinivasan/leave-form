@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request for Leave</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="form-container" class="container">
+      <form id="leaveRequestForm">
+        <div class="form-header">
+          <h2>Request for Leave</h2>
+          <p>Fill your details down below</p>
+          <hr />
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <div class="name-container">
+            <input
+              class="input-field"
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+            />
+            <input
+              class="input-field"
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="employeeId">Employee ID</label>
+          <input
+            class="input-field"
+            type="text"
+            id="employeeId"
+            name="employeeId"
+            pattern="\d{8}"
+            placeholder="8 digit employee ID"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            class="input-field"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <div class="mob-group2">
+            <select
+              class="mob-group2-select"
+              id="areaCode"
+              name="areaCode"
+            ></select>
+            <input
+              class="mob-group2-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123-456-7890"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="position">Position</label>
+          <input
+            class="input-field"
+            type="text"
+            id="position"
+            name="position"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="manager">Manager</label>
+          <input
+            class="input-field"
+            type="text"
+            id="manager"
+            name="manager"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="managerEmail">Manager Email</label>
+          <input
+            class="input-field"
+            type="email"
+            id="managerEmail"
+            name="managerEmail"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="leaveType">Leave Type</label>
+          <select
+            class="styled-select"
+            id="leaveType"
+            name="leaveType"
+            required
+          ></select>
+        </div>
+        <div class="form-header">
+          <h2>Details for leave</h2>
+          <hr />
+        </div>
+        <div class="form-group">
+          <label>Leave Request For</label>
+          <div class="radio-container">
+            <label for="days" class="radio-label">Days</label>
+            <input
+              type="radio"
+              id="days"
+              name="leaveRequestFor"
+              class="radio-btn"
+              checked
+            />
+
+            <label for="hours" class="radio-label">Hours</label>
+            <input
+              type="radio"
+              id="hours"
+              name="leaveRequestFor"
+              class="radio-btn"
+            />
+          </div>
+        </div>
+
+        <!-- Days input section -->
+        <div class="form-group" id="days-section">
+          <label for="leaveStart">Leave Start</label>
+          <input
+            class="input-field"
+            type="date"
+            id="leaveStart"
+            name="leaveStart"
+            required
+          />
+        </div>
+
+        <div class="form-group" id="days-section-end">
+          <label for="leaveEnd">Leave End</label>
+          <input
+            class="input-field"
+            type="date"
+            id="leaveEnd"
+            name="leaveEnd"
+            required
+          />
+        </div>
+
+        <!-- Hours input section -->
+        <div class="form-group" id="hours-section" style="display: none">
+          <label for="startTime">Start Time</label>
+          <input
+            class="input-field"
+            type="time"
+            id="startTime"
+            name="startTime"
+            placeholder="Enter your startTime"
+          />
+        </div>
+
+        <div class="form-group" id="hours-section-end" style="display: none">
+          <label for="endTime">End Time</label>
+          <input class="input-field" type="time" id="endTime" name="endTime" />
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            placeholder="Additional comments..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="button-1" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="thankyou" class="thank-you" style="display: none;">
+      <h3>Thank You for Your Submission!</h3>
+      <p>Your leave request has been successfully submitted.</p>
+      <p>
+        We appreciate you taking the time to fill out the form. Our HR team will
+        review your request and get back to you shortly.
+      </p>
+      <p>
+        If you have any further questions, feel free to reach out to your
+        manager or HR.
+      </p>
+      <p>Have a great day!</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
