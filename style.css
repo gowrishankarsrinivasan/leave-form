@@ -152,8 +152,20 @@ label {
     justify-content: space-around;
     padding: 20px 0;
   }
-  
+
+  .fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom:10px ;
+  }
+  .fieldset legend{
+    padding: 20px;
+  }
+ 
   .radio-btn {
+    
     margin-right: 10px; /* Add space between the radio button and the label */
     position: relative;
     top: -1px; /* Adjust this if needed to fine-tune alignment */
